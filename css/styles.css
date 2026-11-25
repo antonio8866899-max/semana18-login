@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.logo { font-size: 1.4rem; font-weight: bold; color: #38bdf8; }
+.nav-links { list-style: none; display: flex; gap: 1.5rem; }
+.nav-links a { color: white; text-decoration: none; transition: color .3s; }
+.nav-links a:hover { color: #38bdf8; }
+
+/* HERO */
+.hero { text-align: center; padding: 5rem 2rem; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; color: #1e293b; }
+.hero p  { font-size: 1.2rem; margin-bottom: 2rem; color: #555; }
+
+/* BOTONES */
+.btn-primary {
+    display: inline-block;
+    background: #38bdf8;
+    color: white;
+    padding: .8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+.btn-primary:hover { background: #0ea5e9; transform: translateY(-2px); }
+
+/* CONTENIDO */
+.content { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+.content h1 { margin-bottom: 1.5rem; color: #1e293b; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+    transition: transform .3s;
+}
+.card:hover { transform: translateY(-5px); }
+
+/* LOGIN */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e293b, #0ea5e9);
+}
+.login-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    width: 100%;
+    max-width: 400px;
+}
+.login-form h2 { text-align: center; margin-bottom: 1.5rem; color: #1e293b; }
+
+.input-group { margin-bottom: 1.2rem; }
+.input-group label { display: block; margin-bottom: .4rem; font-weight: 600; color: #475569; }
+.input-group input {
+    width: 100%;
+    padding: .8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color .3s;
+}
+.input-group input:focus { outline: none; border-color: #38bdf8; }
+
+.login-form .btn-primary { width: 100%; margin-top: .5rem; }
+
+.error { color: #ef4444; text-align: center; margin-top: 1rem; font-size: .9rem; min-height: 1.2rem; }
+.hint { text-align: center; margin-top: 1rem; font-size: .85rem; color: #64748b; }

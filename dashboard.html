@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Semana 18 - Formativa</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/auth.js"></script>
+    <script>protegerPagina();</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">📘 Semana 18</div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/perfil.html">Perfil</a></li>
+            <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>📊 Panel de Control</h1>
+        <p>Bienvenido, <span id="userName"></span></p>
+
+        <div class="cards">
+            <div class="card"><h3>Estadísticas</h3><p>Datos aquí</p></div>
+            <div class="card"><h3>Reportes</h3><p>Datos aquí</p></div>
+            <div class="card"><h3>Configuración</h3><p>Datos aquí</p></div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('userName').textContent = localStorage.getItem('usuario') || 'Usuario';
+    </script>
+</body>
+</html>
